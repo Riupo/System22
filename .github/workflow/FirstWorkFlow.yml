@@ -1,0 +1,14 @@
+name: My first workflow
+
+on: workflow_dispatch
+
+jobs:
+  my-amazing-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The amazing job has started"
+      - run: echo "This was triggered by a ${{ github.event_name }} event."
+      - run: echo "Running on ${{ runner.os }}"
+      - run: echo "Repository name: ${{ github.repository }}"
+      - run: echo "Branch name: ${{ github.ref }}"
+      - run: echo "The amazing job is complete"
